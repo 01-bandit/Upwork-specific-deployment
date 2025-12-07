@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -17,24 +18,32 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const menuItems = ['Home', 'About', 'Education', 'Experience', 'Certifications', 'Skills', 'Projects', 'Contact']
+
   return (
-    <header 
+    <motion.header 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
+        scrolled ? 'bg-white dark:bg-gray-900 shadow-md py-4' : 'bg-transparent py-6'
       }`}
     >
       <nav className="container mx-auto px-6 flex justify-between items-center">
-        <h1 className={`text-2xl font-bold ${scrolled ? 'text-primary' : 'text-primary'}`}>
+        <motion.h1 
+          whileHover={{ scale: 1.1 }}
+          className={`text-2xl font-bold ${scrolled ? 'text-primary dark:text-white' : 'text-primary dark:text-white'}`}
+        >
           MH
-        </h1>
+        </motion.h1>
         
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8">
-          {['About', 'Education', 'Skills', 'Projects', 'Contact'].map((item) => (
+          {menuItems.map((item) => (
             <li key={item}>
               <a 
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-700 hover:text-secondary transition-colors font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium"
               >
                 {item}
               </a>
@@ -44,8 +53,9 @@ function Header() {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-primary"
+          className="md:hidden text-primary dark:text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle mobile menu"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileMenuOpen ? (
@@ -59,13 +69,18 @@ function Header() {
 
       {/* Mobile Menu - Conditional Rendering based on state */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          className="md:hidden bg-white dark:bg-gray-900 shadow-lg"
+        >
           <ul className="flex flex-col space-y-4 px-6 py-4">
-            {['About', 'Education', 'Skills', 'Projects', 'Contact'].map((item) => (
+            {menuItems.map((item) => (
               <li key={item}>
                 <a 
                   href={`#${item.toLowerCase()}`}
-                  className="text-gray-700 hover:text-secondary transition-colors font-medium"
+                  className="text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item}
@@ -73,9 +88,9 @@ function Header() {
               </li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       )}
-    </header>
+    </motion.header>
   )
 }
 

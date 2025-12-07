@@ -6,6 +6,15 @@ A minimalistic, responsive portfolio website built with React, Vite, and Tailwin
 
 [View Live Site](https://muhammad-hammad-ur-rehman.vercel.app/)
 
+## 🔄 CI/CD Pipeline
+
+This project includes a complete CI/CD workflow:
+- ✅ Automated testing on all PRs
+- ✅ Build verification
+- ✅ Staged deployment (feat → main)
+- ✅ Automated production deployment
+- 📖 See [CI/CD Setup Guide](.github/CI_CD_SETUP.md) for details
+
 ## 📸 Preview
 
 A clean, professional portfolio featuring:
@@ -14,33 +23,41 @@ A clean, professional portfolio featuring:
 - Technical skills organized by category
 - Academic and personal projects
 - Contact form and social links
+- Dark mode toggle
+- Smooth animations
 
 ## 🛠️ Built With
 
 - **React 18** - UI library
 - **Vite** - Fast build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Animation library
 - **JavaScript (ES6+)** - Modern JavaScript features
 
 ## ✨ Features
 
 - ✅ Fully responsive design (mobile, tablet, desktop)
-- ✅ Smooth scroll navigation
+- ✅ Dark mode with persistent storage
+- ✅ Smooth scroll navigation and animations
 - ✅ Mobile-friendly hamburger menu
 - ✅ Interactive contact form with state management
-- ✅ Project showcase with GitHub links
+- ✅ Filterable project showcase
 - ✅ Clean, minimalistic design
 - ✅ Fast performance with Vite
 - ✅ SEO-friendly structure
+- ✅ Error boundaries for robust error handling
 
 ## 🎨 Sections
 
-1. **Header** - Sticky navigation with scroll effects
-2. **About** - Personal introduction and profile picture
+1. **Hero** - Animated landing with typing effect
+2. **About** - Personal introduction with highlights
 3. **Education** - Academic background and certifications
-4. **Skills** - Technical skills categorized by domain
-5. **Projects** - University and personal projects
-6. **Contact** - Contact form and social media links
+4. **Experience** - Timeline of academic journey
+5. **Certifications** - Achievement showcase
+6. **Skills** - Technical skills categorized by domain
+7. **Projects** - Filterable university and personal projects
+8. **Resume** - Download and contact CTAs
+9. **Contact** - Contact form and social media links
 
 ## 🚀 Getting Started
 
