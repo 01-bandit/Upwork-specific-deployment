@@ -37,7 +37,7 @@ export const useScrollPosition = () => {
  * Observes when an element enters/exits the viewport
  * Demonstrates: Intersection Observer API, React refs, custom hooks
  */
-export const useIntersectionObserver = (options = {}) => {
+export const useIntersectionObserver = (threshold = 0.1) => {
   const [isIntersecting, setIsIntersecting] = useState(false)
   const [ref, setRef] = useState(null)
 
@@ -47,8 +47,7 @@ export const useIntersectionObserver = (options = {}) => {
     const observer = new IntersectionObserver(([entry]) => {
       setIsIntersecting(entry.isIntersecting)
     }, {
-      threshold: 0.1,
-      ...options
+      threshold
     })
 
     observer.observe(ref)
@@ -58,7 +57,7 @@ export const useIntersectionObserver = (options = {}) => {
         observer.unobserve(ref)
       }
     }
-  }, [ref, options])
+  }, [ref, threshold])
 
   return [setRef, isIntersecting]
 }

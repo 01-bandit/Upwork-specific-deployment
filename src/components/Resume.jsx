@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 /**
@@ -5,9 +6,15 @@ import { motion } from 'framer-motion'
  * Demonstrates: File handling, external links, call-to-action design
  */
 function Resume() {
+  const [showMessage, setShowMessage] = useState(false)
+
   const handleDownload = () => {
+    // Show user feedback message
+    setShowMessage(true)
+    setTimeout(() => setShowMessage(false), 3000)
+    
     // In a real implementation, this would download an actual PDF resume
-    alert('Resume download feature - In production, this would download your actual resume PDF')
+    // Example: window.open('/path/to/resume.pdf', '_blank')
   }
 
   return (
@@ -25,6 +32,17 @@ function Resume() {
           <p className="text-xl text-white/90 mb-8">
             Download my resume or get in touch to discuss opportunities
           </p>
+
+          {showMessage && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="mb-6 inline-block bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg"
+            >
+              📄 Resume download feature - Add your actual resume PDF to enable downloads
+            </motion.div>
+          )}
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.button

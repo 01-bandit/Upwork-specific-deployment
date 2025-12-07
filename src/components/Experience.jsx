@@ -116,7 +116,7 @@ function TimelineItem({ experience, index }) {
       {/* Content */}
       <div className={`w-5/12 ${isLeft ? 'text-right' : 'text-left'}`}>
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-100 dark:border-gray-700">
-          <div className="flex items-center gap-3 mb-3 justify-end">
+          <div className={`flex items-center gap-3 mb-3 ${isLeft ? 'justify-end' : 'justify-start'}`}>
             <span className="text-3xl">{experience.icon}</span>
           </div>
           <span className="inline-block px-3 py-1 bg-primary/10 dark:bg-secondary/20 text-primary dark:text-blue-400 text-sm font-semibold rounded-full mb-3">
