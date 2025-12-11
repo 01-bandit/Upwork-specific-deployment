@@ -1,4 +1,4 @@
-import { useState } from 'react'
+{/*import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 function Contact() {
@@ -51,9 +51,9 @@ function Contact() {
           </h2>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12">*/}
           {/* Contact Information */}
-          <motion.div
+          {/*<motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -113,10 +113,10 @@ function Contact() {
                 <span>Islamabad, Pakistan</span>
               </motion.div>
             </div>
-          </motion.div>
+          </motion.div>*/}
 
           {/* Contact Form */}
-          <motion.div
+          {/*<motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -198,4 +198,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default Contact*/}
