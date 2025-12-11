@@ -101,18 +101,25 @@ The test suite includes 12 tests covering:
 
 Add in **Settings → Secrets and variables → Actions**:
 
+### For Personal Accounts (Your Setup):
 ```
-VERCEL_TOKEN       - Your Vercel deployment token
-VERCEL_ORG_ID      - Your Vercel organization ID  
-VERCEL_PROJECT_ID  - Your Vercel project ID
+VERCEL_TOKEN       - Your Vercel deployment token (REQUIRED)
+VERCEL_PROJECT_ID  - Your Vercel project ID (REQUIRED)
 ```
+
+### For Team/Organization Accounts (Optional):
+```
+VERCEL_ORG_ID      - Your Vercel organization ID (only if using team account)
+```
+
+**Note:** `VERCEL_ORG_ID` is optional for personal Vercel accounts. Your token provides the necessary authentication.
 
 ### How to get Vercel tokens:
 
 1. Go to https://vercel.com/account/tokens
-2. Create new token
+2. Create new token with appropriate scope
 3. Copy token value
-4. Get org and project IDs from your Vercel project settings
+4. Get project ID from your Vercel project dashboard (Settings → General)
 
 ## 📊 CI/CD Flow Diagram
 

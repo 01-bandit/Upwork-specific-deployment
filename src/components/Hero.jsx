@@ -93,10 +93,10 @@ function Hero() {
             View Projects
           </a>
           <a 
-            href="#contact"
+            href="#projects"
             className="px-6 md:px-8 py-3 md:py-4 bg-white dark:bg-gray-800 text-primary dark:text-white border-2 border-primary dark:border-secondary rounded-lg font-semibold hover:bg-primary hover:text-white dark:hover:bg-secondary transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
           >
-            Get In Touch
+            Explore More
           </a>
         </motion.div>
 

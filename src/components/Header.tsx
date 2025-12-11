@@ -32,7 +32,7 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const menuItems: string[] = ['Home', 'About', 'Education', 'Experience', 'Certifications', 'Skills', 'Projects', 'Contact']
+  const menuItems: string[] = ['Home', 'About', 'Education', 'Experience', 'Certifications', 'Skills', 'Projects']
 
   return (
     <motion.header 

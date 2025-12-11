@@ -16,7 +16,6 @@ const Experience = lazy(() => import('./components/Experience'))
 const Certifications = lazy(() => import('./components/Certifications'))
 const Skills = lazy(() => import('./components/Skills'))
 const Projects = lazy(() => import('./components/Projects'))
-const Contact = lazy(() => import('./components/Contact'))
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -49,7 +48,6 @@ function App() {
               <Certifications />
               <Skills />
               <Projects />
-              <Contact />
             </Suspense>
           </main>
           <footer 

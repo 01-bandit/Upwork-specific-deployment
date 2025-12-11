@@ -58,12 +58,12 @@ function Resume() {
             </motion.button>
 
             <motion.a
-              href="#contact"
+              href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-all"
             >
-              Contact Me
+              View Projects
             </motion.a>
           </div>
 
