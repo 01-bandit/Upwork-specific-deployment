@@ -12,7 +12,7 @@ function Projects() {
       category: 'personal',
       type: 'Work in Progress',
       github: '',
-      icon: '📞',
+      icon: '',
       highlight: true
     },
     {
@@ -22,7 +22,7 @@ function Projects() {
       category: 'personal',
       type: 'Personal Project',
       github: 'https://github.com/01-bandit/SecureChat',
-      icon: '🔐'
+      icon: ''
     },
     {
       title: 'Portfolio Website',
@@ -31,7 +31,7 @@ function Projects() {
       category: 'personal',
       type: 'Personal Project',
       github: 'https://github.com/01-bandit/portfolio-website',
-      icon: '🌐'
+      icon: ''
     },
     {
       title: '2D Chess Game',
@@ -40,7 +40,7 @@ function Projects() {
       category: 'academic',
       type: 'FAST University Semester Project',
       github: 'https://github.com/01-bandit/PF-Project',
-      icon: '♟️'
+      icon: ''
     },
     {
       title: 'Weather Dashboard',
@@ -49,7 +49,7 @@ function Projects() {
       category: 'academic',
       type: 'FAST University Assignment',
       github: 'https://github.com/01-bandit/Weather-Dashboard',
-      icon: '🌤️'
+      icon: ''
     },
   ]
 
@@ -119,13 +119,12 @@ function Projects() {
               {project.highlight && (
                 <div className="mb-3">
                   <span className="inline-block px-3 py-1 bg-gradient-to-r from-secondary to-blue-500 text-white text-xs font-bold rounded-full">
-                    ⭐ FEATURED PROJECT
+                    FEATURED PROJECT
                   </span>
                 </div>
               )}
               <div className="flex flex-wrap justify-between items-start mb-3 gap-2">
                 <div className="flex items-center gap-2 md:gap-3 flex-1 min-w-0">
-                  <span className="text-3xl">{project.icon}</span>
                   <h3 className="text-xl md:text-2xl font-bold text-primary dark:text-white break-words">
                     {project.title}
                   </h3>

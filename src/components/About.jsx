@@ -24,22 +24,22 @@ function About() {
           >
             <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
               <p className="break-words">
-                👋 Hi! I'm a passionate Software Engineering student from Islamabad, Pakistan, 
+                Hi! I'm a passionate Software Engineering student from Islamabad, Pakistan, 
                 with a keen interest in full-stack development, AI/ML, and building innovative software solutions.
               </p>
               <p className="break-words">
-                💡 <strong className="text-primary dark:text-blue-400">Honest Background:</strong> I'm currently studying at FAST-NUCES and haven't worked 
+                <strong className="text-primary dark:text-blue-400">Honest Background:</strong> I'm currently studying at FAST-NUCES and haven't worked 
                 in a production environment yet. My technical skills come from university coursework, semester projects, 
                 and personal exploration. I'm eager to learn industry best practices and transition from academic 
                 projects to real-world applications.
               </p>
               <p className="break-words">
-                🚀 <strong className="text-primary dark:text-blue-400">What Drives Me:</strong> I love the challenge of solving complex problems through code. 
+                <strong className="text-primary dark:text-blue-400">What Drives Me:</strong> I love the challenge of solving complex problems through code. 
                 Whether it's implementing end-to-end encryption, building interactive web applications, or exploring 
                 data structures, I approach each project as an opportunity to learn something new.
               </p>
               <p className="break-words">
-                🎯 <strong className="text-primary dark:text-blue-400">Currently:</strong> Working with React, Node.js, Django, PostgreSQL, and MongoDB through 
+                <strong className="text-primary dark:text-blue-400">Currently:</strong> Working with React, Node.js, Django, PostgreSQL, and MongoDB through 
                 university assignments and side projects. Always exploring new technologies and frameworks to expand my toolkit.
               </p>
             </div>
@@ -54,15 +54,14 @@ function About() {
             className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-8 md:mt-12"
           >
             {[
-              { icon: '🎓', title: 'Education', desc: 'BS Software Engineering' },
-              { icon: '💻', title: 'Focus', desc: 'Full-Stack Development' },
-              { icon: '🌟', title: 'Goal', desc: 'Industry Excellence' }
+              { icon: '', title: 'Education', desc: 'BS Software Engineering' },
+              { icon: '', title: 'Focus', desc: 'Full-Stack Development' },
+              { icon: '', title: 'Goal', desc: 'Industry Excellence' }
             ].map((item, index) => (
               <div
                 key={index}
                 className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 md:p-6 border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow"
               >
-                <div className="text-3xl md:text-4xl mb-2 md:mb-3">{item.icon}</div>
                 <h4 className="text-base md:text-lg font-bold text-primary dark:text-white mb-1 md:mb-2">{item.title}</h4>
                 <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm">{item.desc}</p>
               </div>

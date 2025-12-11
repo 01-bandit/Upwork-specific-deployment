@@ -59,7 +59,7 @@ function Education() {
                     {edu.institution}
                   </p>
                   <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                    📍 {edu.location}
+                    {edu.location}
                   </p>
                 </div>
                 <div className="mt-2 lg:mt-0 flex-shrink-0">

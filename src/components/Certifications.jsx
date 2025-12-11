@@ -11,7 +11,7 @@ function Certifications() {
       issuer: 'University of Michigan (Coursera)',
       date: '2023',
       description: 'Comprehensive Python programming covering data structures, web scraping, databases, and data visualization.',
-      icon: '🐍',
+      icon: '',
       skills: ['Python', 'Data Structures', 'Web Scraping', 'SQL']
     },
     {
@@ -19,7 +19,7 @@ function Certifications() {
       issuer: 'FAST-NUCES',
       date: 'Fall 2025',
       description: 'Comprehensive security course covering cryptography, network security, secure software development, and attack/defense techniques. Built SecureChat with E2E encryption.',
-      icon: '🔐',
+      icon: '',
       skills: ['Cryptography', 'E2E Encryption', 'Security', 'ECDH/AES-GCM']
     },
     {
@@ -27,7 +27,7 @@ function Certifications() {
       issuer: 'FAST-NUCES',
       date: 'Fall 2024',
       description: 'Full-stack web development covering React, Node.js, REST APIs, and modern web architecture with hands-on projects.',
-      icon: '🌐',
+      icon: '',
       skills: ['React', 'Node.js', 'REST APIs', 'MongoDB']
     },
     {
@@ -35,7 +35,7 @@ function Certifications() {
       issuer: 'FAST-NUCES',
       date: 'Fall 2024',
       description: 'Advanced database design, SQL optimization, normalization, transactions, and distributed database systems.',
-      icon: '🗄️',
+      icon: '',
       skills: ['PostgreSQL', 'SQL', 'Database Design', 'Query Optimization']
     },
     {
@@ -43,7 +43,7 @@ function Certifications() {
       issuer: 'FAST-NUCES',
       date: 'Spring 2025',
       description: 'Software engineering best practices, design patterns, testing, CI/CD, and collaborative development workflows.',
-      icon: '⚙️',
+      icon: '',
       skills: ['Design Patterns', 'Testing', 'CI/CD', 'Agile']
     },
     {
@@ -51,7 +51,7 @@ function Certifications() {
       issuer: 'FAST-NUCES',
       date: 'Fall 2025',
       description: 'Machine Learning Operations covering model deployment, monitoring, versioning, and production ML workflows.',
-      icon: '🤖',
+      icon: '',
       skills: ['ML Deployment', 'Model Monitoring', 'MLOps', 'Automation']
     }
   ]
@@ -84,8 +84,7 @@ function Certifications() {
               whileHover={{ y: -8 }}
               className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-4 md:p-6 border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all"
             >
-              <div className="flex items-start gap-3 md:gap-4 mb-3 md:mb-4">
-                <span className="text-3xl md:text-4xl flex-shrink-0">{cert.icon}</span>
+              <div className="mb-3 md:mb-4">
                 <div className="flex-1 min-w-0">
                   <h3 className="text-lg md:text-xl font-bold text-primary dark:text-white mb-1 md:mb-2 break-words">
                     {cert.title}
@@ -126,16 +125,15 @@ function Certifications() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-8 md:mt-12"
         >
           {[
-            { label: 'Courses Completed', value: '25+', icon: '📚' },
-            { label: 'Projects Built', value: '15+', icon: '🚀' },
-            { label: 'Technologies Learned', value: '12+', icon: '⚡' },
-            { label: 'Current CGPA', value: '2.15', icon: '🎯' }
+            { label: 'Courses Completed', value: '25+', icon: '' },
+            { label: 'Projects Built', value: '15+', icon: '' },
+            { label: 'Technologies Learned', value: '12+', icon: '' },
+            { label: 'Current CGPA', value: '2.15', icon: '' }
           ].map((stat, index) => (
             <div
               key={index}
               className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-4 md:p-6 text-center border border-gray-100 dark:border-gray-700"
             >
-              <div className="text-2xl md:text-3xl mb-2">{stat.icon}</div>
               <div className="text-2xl md:text-3xl font-bold text-primary dark:text-white mb-1">
                 {stat.value}
               </div>

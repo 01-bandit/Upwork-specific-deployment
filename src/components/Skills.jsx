@@ -6,32 +6,32 @@ function Skills() {
     {
       title: 'Frontend Development',
       skills: ['React', 'JavaScript', 'HTML/CSS', 'Tailwind CSS'],
-      icon: '🎨'
+      icon: ''
     },
     {
       title: 'Backend Development',
       skills: ['Node.js', 'Django', 'Express.js', 'Python'],
-      icon: '⚙️'
+      icon: ''
     },
     {
       title: 'Databases',
       skills: ['PostgreSQL', 'MongoDB', 'MySQL'],
-      icon: '🗄️'
+      icon: ''
     },
     {
       title: 'Programming Languages',
       skills: ['JavaScript', 'Python', 'Java', 'C/C++'],
-      icon: '💻'
+      icon: ''
     },
     {
       title: 'Tools & Technologies',
       skills: ['Git/GitHub', 'MERN Stack', 'REST APIs', 'Data Analysis'],
-      icon: '🔧'
+      icon: ''
     },
     {
       title: 'Concepts & Practices',
       skills: ['OOP', 'Data Structures', 'Algorithms', 'Web Security'],
-      icon: '📚'
+      icon: ''
     }
   ]
 
@@ -65,8 +65,7 @@ function Skills() {
               whileHover={{ y: -8, scale: 1.02 }}
               className="bg-gradient-to-br from-primary to-secondary dark:from-blue-600 dark:to-blue-400 p-4 md:p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all"
             >
-              <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
-                <span className="text-2xl md:text-3xl">{category.icon}</span>
+              <div className="mb-3 md:mb-4">
                 <h3 className="text-lg md:text-xl font-bold text-white break-words">
                   {category.title}
                 </h3>
