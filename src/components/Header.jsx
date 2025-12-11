@@ -1,9 +1,24 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { useMediaQuery, useToggle, useOnClickOutside, useKeyPress } from '../hooks/useAdvancedHooks'
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, toggleMobileMenu] = useToggle(false)
+  const menuRef = useRef(null)
+  
+  // Use custom hook to detect mobile/desktop
+  const isMobile = useMediaQuery('(max-width: 768px)')
+
+  // Close mobile menu when clicking outside
+  useOnClickOutside(menuRef, () => {
+    if (mobileMenuOpen) toggleMobileMenu()
+  })
+
+  // Close mobile menu on Escape key
+  useKeyPress('Escape', () => {
+    if (mobileMenuOpen) toggleMobileMenu()
+  })
 
   // useEffect: Runs side effects (like adding event listeners) after component renders
   // The empty array [] means this effect runs only once when component mounts
@@ -54,8 +69,9 @@ function Header() {
         {/* Mobile Menu Button */}
         <button 
           className="md:hidden text-primary dark:text-white"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
+          aria-expanded={mobileMenuOpen}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {mobileMenuOpen ? (
@@ -70,6 +86,7 @@ function Header() {
       {/* Mobile Menu - Conditional Rendering based on state */}
       {mobileMenuOpen && (
         <motion.div
+          ref={menuRef}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
@@ -81,7 +98,7 @@ function Header() {
                 <a 
                   href={`#${item.toLowerCase()}`}
                   className="text-gray-700 dark:text-gray-300 hover:text-secondary dark:hover:text-blue-400 transition-colors font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={toggleMobileMenu}
                 >
                   {item}
                 </a>

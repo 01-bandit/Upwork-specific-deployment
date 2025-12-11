@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { ThemeProvider } from './context/ThemeContext'
 import ErrorBoundary from './components/ErrorBoundary'
 import Loading from './components/Loading'
+import SkipLink from './components/SkipLink'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -33,11 +34,12 @@ function App() {
     <ErrorBoundary>
       <ThemeProvider>
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+          <SkipLink />
           <ScrollProgress />
           <ThemeToggle />
           <BackToTop />
           <Header />
-          <main>
+          <main id="main-content" tabIndex="-1">
             <Hero />
             <About />
             <Education />
@@ -48,7 +50,10 @@ function App() {
             {/*<Resume />*/}
             <Contact />
           </main>
-          <footer className="bg-primary dark:bg-gray-900 text-white py-6 text-center border-t border-gray-200 dark:border-gray-800">
+          <footer 
+            className="bg-primary dark:bg-gray-900 text-white py-6 text-center border-t border-gray-200 dark:border-gray-800"
+            role="contentinfo"
+          >
             <p className="text-sm">© 2025 Muhammad Hammad ur Rehman. Built with React, Vite & Tailwind CSS.</p>
             <p className="text-xs mt-2 text-gray-300 dark:text-gray-400">Demonstrating modern web engineering concepts and best practices</p>
           </footer>
