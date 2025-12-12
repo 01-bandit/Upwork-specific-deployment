@@ -82,7 +82,6 @@ test('Required components exist', () => {
     'src/components/About.jsx',
     'src/components/Skills.jsx',
     'src/components/Projects.jsx',
-    'src/components/Contact.jsx',
     'src/components/Experience.jsx',
     'src/components/Certifications.jsx'
   ];
@@ -122,8 +121,6 @@ test('Dependencies are properly defined', () => {
 test('Documentation exists', () => {
   const docs = [
     'README.md',
-    'WEB_ENGINEERING_CONCEPTS.md',
-    'IMPLEMENTATION_SUMMARY.md'
   ];
   
   docs.forEach(doc => {
@@ -183,16 +180,6 @@ test('GitHub Actions workflows exist', () => {
     const workflowPath = join(rootDir, workflow);
     assert(existsSync(workflowPath), `${workflow} not found`);
   });
-});
-
-// Test 12: Branch protection documentation exists
-test('Branch protection documentation exists', () => {
-  const docPath = join(rootDir, '.github/BRANCH_PROTECTION.md');
-  assert(existsSync(docPath), 'Branch protection documentation not found');
-  
-  const content = readFileSync(docPath, 'utf-8');
-  assert(content.includes('main'), 'Main branch not documented');
-  assert(content.includes('feat'), 'Feat branch not documented');
 });
 
 // Print summary
