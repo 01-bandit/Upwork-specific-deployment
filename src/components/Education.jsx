@@ -23,6 +23,54 @@ function Education() {
         'Covered data structures, web scraping, databases, and data visualization',
         'Applied Python skills in academic and personal projects'
       ]
+    },
+    {
+      degree: 'Software Quality Engineering',
+      institution: 'FAST-NUCES',
+      location: 'Islamabad, Pakistan',
+      period: '2025',
+      highlights: [
+        'Comprehensive testing methodology course covering unit testing, integration testing, black-box testing, and API testing',
+        'Hands-on experience with testing frameworks and tools: Cypress (E2E), Jest, Vitest, Postman (API testing), and pytest',
+        'Studied QA principles, test case design, test execution strategies, and quality assurance best practices',
+        'Applied testing techniques to real-world applications and built robust test suites'
+      ]
+    },
+    {
+      degree: 'Software Design and Architecture',
+      institution: 'FAST-NUCES',
+      location: 'Islamabad, Pakistan',
+      period: '2024-2025',
+      highlights: [
+        'Learned design patterns, architectural patterns, and SOLID principles',
+        'Studied microservices architecture, monolithic design, and scalable system design',
+        'Implemented clean code practices and refactoring techniques',
+        'Analyzed real-world system architectures and design trade-offs'
+      ]
+    },
+    {
+      degree: 'Software Re-Engineering',
+      institution: 'FAST-NUCES',
+      location: 'Islamabad, Pakistan',
+      period: '2025',
+      highlights: [
+        'Focused on legacy code analysis, refactoring, and modernization techniques',
+        'Worked with testing frameworks including pytest for Python and Jest for JavaScript',
+        'Studied code smell detection, technical debt assessment, and continuous improvement',
+        'Practical experience in transforming monolithic systems and improving code quality'
+      ]
+    },
+    {
+      degree: 'Fundamentals of Software Project Management',
+      institution: 'FAST-NUCES',
+      location: 'Islamabad, Pakistan',
+      period: '2025',
+      highlights: [
+        'Learned project management methodologies: Waterfall, Agile (Scrum, Kanban), and hybrid approaches',
+        'Studied risk management, resource allocation, scheduling, and budgeting techniques',
+        'Explored team dynamics, stakeholder management, and communication strategies',
+        'Analyzed real-world case studies of successful and failed software projects'
+      ]
     }
   ]
 
