@@ -172,8 +172,6 @@ test('GitHub Actions workflows exist', () => {
   const workflows = [
     '.github/workflows/ci.yml',
     '.github/workflows/deploy.yml',
-    '.github/workflows/merge-to-feat.yml',
-    '.github/workflows/promote-to-main.yml'
   ];
   
   workflows.forEach(workflow => {
