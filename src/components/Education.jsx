@@ -71,6 +71,18 @@ function Education() {
         'Explored team dynamics, stakeholder management, and communication strategies',
         'Analyzed real-world case studies of successful and failed software projects'
       ]
+    },
+    {
+      degree: 'Cloud Computing',
+      institution: 'FAST-NUCES',
+      location: 'Islamabad, Pakistan',
+      period: '2025',
+      highlights: [
+        'Studied AWS core services: EC2, S3, IAM, Lambda, API Gateway, RDS, and VPC networking fundamentals',
+        'Hands-on labs deploying scalable, fault-tolerant architectures with load balancing and auto scaling concepts',
+        'Explored cloud security best practices including IAM policies, encryption, and least-privilege access',
+        'Covered cost optimization, monitoring, and basic infrastructure-as-code workflows'
+      ]
     }
   ]
 
